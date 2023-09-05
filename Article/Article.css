@@ -1,0 +1,54 @@
+* {
+    text-align: center;
+    font: Helvetica;
+}
+
+body {
+    background-color: #131325;
+    font-family: Helvetica;
+}
+
+h2 {
+    color: white;
+}
+
+a {
+    color:lightblue;
+    font-size:20px;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+a:hover {
+    font-size:25px;
+}
+
+.article {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: top;
+    padding:4px;
+    font-family: Helvetica;
+}
+
+.image {
+    padding: 15px;
+}
+
+.text {
+    color:white;
+    font: Helvetica;
+}
+
+.article img {
+    position: absolute;
+    height: 75px;
+    left: 80%;
+}
+
+.picked {
+    color:white
+}
