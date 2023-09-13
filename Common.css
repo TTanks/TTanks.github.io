@@ -1,3 +1,8 @@
+body {
+  background-color: #131325;
+  font-family: Helvetica;
+}
+
 .topnav {
   overflow: hidden;
   background-color: #236caf;

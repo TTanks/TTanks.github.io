@@ -52,3 +52,7 @@ a:hover {
 .picked {
     color:white
 }
+
+@media only screen and (max-width: 28cm) {
+    .article img {left: 70%};
+  }
