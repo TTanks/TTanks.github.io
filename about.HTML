@@ -20,6 +20,17 @@
     hr.solid {
       border-top: 3px solid #0a3953;
     }
+
+    #allcounter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .counterdiv {
+      margin-right: 15px;
+      margin-left: 15px;
+    }
   </style>
   <title>TankersTank - About</title>
   <link href='./css/common.css' rel='stylesheet'>
@@ -50,10 +61,22 @@
       </p>
       <hr class="solid">
       <h1>Activities</h1>
-      <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-      <div class="elfsight-app-22ad2f70-5501-4957-a8f9-ab4744ea71d9"></div>
-      <p>*If it fail to load its because of elfsight's viewer limit</p>
+      <div id="allcounter">
+        <div class="counterdiv">
+          <h5>All Time</h5>
+          <h2 id="counterfull"></h2>
+        </div>
+        <div class="counterdiv">
+          <h5>This month</h5>
+          <h2 id="countermonth"></h2>
+        </div>
+        <div class="counterdiv">
+          <h5>This day</h5>
+          <h2 id="counterdaily"></h2>
+        </div>
+      </div>
       <hr class="solid">
     </div>
   </div>
+  <script src="./js/visitor-counter.js"></script>
 </body>
