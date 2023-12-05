@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    * {
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      color: white;
+    }
+
+    .grey {color:lightblue;}
+  </style>
+  <title>TankersTank - Contact</title>
+  <link href='./css/common.css' rel='stylesheet'>
+</head>
+
+<body>
+  <div class="topnav">
+    <a class="active" href="./index.html">Home</a>
+    <a href="./about.HTML">About</a>
+    <a href="./contact.HTML">Contact</a>
+    <a href="./article/article.html">Articles</a>
+    <div id="search">
+        <input type="text" id="text" placeholder="Search">
+        <button onclick="submitSearch()" id="button">
+            <img src="./image/search-icon.png" id="icon">
+        </button>
+        <div id="results"></div>
+        <script src="./js/searcher-layer1.js"></script>
+    </div>
+  </div>
+
+  <div id="background" style="background-image: url(./image/background.jpg)">
+    <div id="foreground">
+      <h1>Emails is at <strong>tankersttank@gmail.com</strong></h1>
+      <hr class="solid">
+      <h1>Link Tree is at <strong><a class=grey href='https://linktr.ee/_arslan_' target='_blank'>_arslan_</a></strong></h1>
+    </div>
+  </div>
+</body>

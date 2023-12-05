@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    * {box-sizing: border-box;
+      text-align: center;}
+
+  p {
+    color:white;
+    font: Helvetica;
+  }
+
+  h2 {
+    color: lightblue;
+    font: Helvetica;
+  }
+
+  h1 {
+    color: lightblue;
+    font: Helvetica;
+  }
+
+  .img {
+    padding: 5%;
+  }
+
+  @media only screen and (max-width: 300px) {
+    h1 {font-size: 11px};
+  }
+  </style>
+  <title>TankersTank</title>
+  <link href='./css/common.css' rel='stylesheet'>
+</head>
+
+<body>
+  <div class="topnav">
+    <a class="active" href="./index.html">Home</a>
+    <a href="./about.HTML">About</a>
+    <a href="./contact.HTML">Contact</a>
+    <a href="./article/article.html">Articles</a>
+    <div id="search">
+        <input type="text" id="text" placeholder="Search">
+        <button onclick="submitSearch()" id="button">
+            <img src="./image/search-icon.png" id="icon">
+        </button>
+        <div id="results"></div>
+        <script src="./js/searcher-layer1.js"></script>
+    </div>
+  </div>
+
+  <div id="background" style="background-image: url(./image/background.jpg)">
+    <div id="foreground">
+      <div id="welcom">
+        <img src="./image/home.gif" style="height: 50%">
+        <h1 class="text"><strong><span class="auto-type"></span></strong></h1>
+      </div>
+
+      <div>
+        <h1>Introduction</h1>
+        <p>A tank is an armored fighting vehicle intended as a primary offensive weapon in front-line ground combat.
+        Tank designs are a balance of heavy firepower, strong armor, and good battlefield mobility provided by tracks
+        and a powerful engine; usually their main armament is mounted in a turret. They are a mainstay of modern 20th
+        and 21st-century ground forces and a key part of combined arms combat.</p>
+        <h2>History</h2>
+        <p>The first concept of a tank is from Leonardo Da Vinci. And the first tank to be used in warfare is the
+        British Mark I; it was first used in September of 1916 to fight in the trenches of WW1. Before long, one
+        British tank got captured by the Germans and renamed to the Beutepanzerwagen IV. Using the captured tank as a
+        reference, the Germans created the PzKpfw Panther and Tiger, which are largely superior to the Alliance's.
+        Due to the Axis's apparent superiority over the Alliance, they were forced to keep up, creating tanks such as
+          the Churchill tank, Cromwell tank, M4 Sherman, etc.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed(".auto-type", {
+      strings: ["Welcome to TankersTank", "Tanks new and old", "Anywhere around the globe"],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true
+    })
+  </script>
+</body>
