@@ -31,6 +31,43 @@
       margin-right: 15px;
       margin-left: 15px;
     }
+
+    #feedbackcontainer {
+      display: flex;
+      align-items: center; /* Center children horizontally */
+      justify-content: center; /* Center children vertically */
+      width:100%;
+    }
+
+    #feedback {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #0000001a;
+      width: 80%;
+      max-width: 100%;
+      margin-top: 20px;
+    }
+
+    #feedback .inputs,
+    #feedback button {
+      margin-bottom: 15px;
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    #feedback button {
+      background-color: #4c53af;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #301a52;
+    }
   </style>
   <title>TankersTank - About</title>
   <link href='./css/common.css' rel='stylesheet'>
@@ -76,7 +113,34 @@
         </div>
       </div>
       <hr class="solid">
+      <h1>Feedback</h1>
+      <div id="feedbackcontainer">
+        <form onsubmit="sendEmail(); reset(); return false" id="feedback">
+          <input type="text" id="name" class="inputs" placeholder="Enter your name">
+          <input type="email" id="email" class="inputs" placeholder="Enter your email">
+          <textarea id="message" rows="4" class="inputs" placeholder="Tell us about your experience"></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </div>
   </div>
   <script src="./js/visitor-counter.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function sendEmail() {
+      Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "tankersttank@gmail.com",
+        Password : "B14F2F5129A43266186DDEEA570CCF9AD700",
+        To : 'tankersttank@gmail.com',
+        From : 'arkananta.arslan@gmail.com',
+        Subject : "Feedback recieved on TankersTank",
+        Body : "Name: " + document.getElementById("name").value +
+        "<br> Email: " + document.getElementById("email").value +
+        "<br> Message: " + document.getElementById("message").value
+      }).then(
+        message => alert(message)
+      );
+    }
+  </script>
 </body>
