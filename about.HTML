@@ -138,8 +138,21 @@
         Body : "Name: " + document.getElementById("name").value +
         "<br> Email: " + document.getElementById("email").value +
         "<br> Message: " + document.getElementById("message").value
-      });
-      alert("Thank you for sending a feedback");
+      }).then(
+        alert("Thank you for entering a feedback!")
+      );
+      Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "tankersttank@gmail.com",
+        Password : "B14F2F5129A43266186DDEEA570CCF9AD700",
+        To : document.getElementById("email").value,
+        From : 'tankersttank@gmail.com',
+        Subject : `Thank you!`,
+        Body : "Thank you for sending a feedback to TankersTank!" +
+        "<br>" + `<image src="background.jpg">`
+      })
     }
   </script>
 </body>
+
+</html>
