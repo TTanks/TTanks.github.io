@@ -127,7 +127,14 @@
   <script src="./js/visitor-counter.js"></script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script>
+    let name;
     function sendEmail() {
+      if (document.getElementById("name").value != "") {
+        name = document.getElementById("name").value + "!";
+      }
+      else {
+        name = "hope you like it!"
+      }
       Email.send({
         Host : "smtp.elasticemail.com",
         Username : "tankersttank@gmail.com",
@@ -149,7 +156,7 @@
         From : 'tankersttank@gmail.com',
         Subject : `Thank you!`,
         Body : `<div style='border-radius: 5px; width: 100vh; background-color: #131325e6;' > 
-                  <img src='https://img1.niftyimages.com/teah/dk8i/h5j5?name=${document.getElementById("name").value}!' style='margin-top: 50px; width: 100vh;' /> 
+                  <img src='https://img1.niftyimages.com/teah/dk8i/h5j5?name=${name}' style='margin-top: 50px; width: 100vh;' /> 
                   <hr style='border-top: 3px solid #0a3953; width: 80vh;; color: #fff;' > 
                   <h2 style='margin-bottom: 50px; padding: 10px; color: #fff; text-align: center;' >If you want to send further feedback, please send a message to <a href="mailto:tankersttank@gmail.com" target="_blank" style='color: #6a70c2'>tankersttank@gmail.com</a></h2> 
                 </div>`
